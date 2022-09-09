@@ -41,7 +41,6 @@ file_dict = {}
 for i in range(n):
     strings.append(str(input("Введите название файла и операции с ним через пробел ")))
     str_to_dict = strings[i].split()
-
     if len(str_to_dict) == 1:
         file_dict[str_to_dict[0]] = 0
     if len(str_to_dict) == 2:
@@ -58,11 +57,11 @@ for i in range(m):
     operations.append(str(input("Введите операцию с маленькой и название файла для применения операции через пробел ")))
     oper_to_dict = operations[i].split()
     if oper_to_dict[0] == "read":
-        oper_to_dict[0] = "r"
+        oper_to_dict[0] = "R"
     if oper_to_dict[0] == "write":
-        oper_to_dict[0] = "w"
+        oper_to_dict[0] = "W"
     if oper_to_dict[0] == "execute":
-        oper_to_dict[0] = "x"
+        oper_to_dict[0] = "X"
     oper_dict[oper_to_dict[1]] = oper_to_dict[0]
 
 for key in oper_dict:
