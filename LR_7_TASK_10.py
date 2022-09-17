@@ -8,7 +8,7 @@ min_a = a.index(min(a))
 max_a = a.index(max(a))
 a[min_a], a[max_a] = a[max_a], a[min_a]
 
-# a[a.index(min(a))], a[a.index(max(a))] = a[a.index(max(a))], a[a.index(min(a))] почему так не заработало?(((
+# aF[aF.index(min(aF))], aF[aF.index(max(aF))] = aF[aF.index(max(aF))], aF[aF.index(min(aF))] почему так не заработало?(((
 
 for elem in a:
     print(elem, sep=", ")

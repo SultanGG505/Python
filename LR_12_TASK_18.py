@@ -7,7 +7,7 @@
 # int = open("Names\\" + str(aboba) + "_BoysNames.txt", "r")
 # print("ok")
 
-# a = set()
+# aF = set()
 # words = ['hello', 'daddy', 'hello', 'mum']
 # set(words)
 # print(set(words))
@@ -29,7 +29,7 @@ while IBOY != 2013:
     lines = file.readlines()
     for line in lines:
         Lst = line.split()
-        ResBoy.add(Lst[0])
+        ResBoy.add(Lst)
     file.close()
     IBOY += 1
 
