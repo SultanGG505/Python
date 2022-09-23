@@ -10,7 +10,6 @@ baza = dict()
 
 words = text.split(" ")
 for word in words:
-    baza[word] = set()
     baza[word] = words.count(word)
 
 print(baza)
