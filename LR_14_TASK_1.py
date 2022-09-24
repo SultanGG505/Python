@@ -28,9 +28,12 @@ def click():
     # C помощью config() можем изменить отображаемый текст
     faren = entry.get()
     # (Фаренгейт — 32): 1, 8 = Цельсий
-    res = (int(faren) - 32) / 1.8
-    label.config(text=res)
-
+    try:
+        res = (float(faren) - 32) / 1.8
+        label.config(text=res)
+    except:
+        label.config(text="Ошибка, введите число!")
+        ValueError
 
 window = tkinter.Tk()
 window.title("Перевод Фаренгейт в градусы")
