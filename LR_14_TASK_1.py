@@ -33,11 +33,12 @@ def click():
         label.config(text=res)
     except:
         label.config(text="Ошибка, введите число!")
-        ValueError
+        # ValueError
 
 window = tkinter.Tk()
 window.title("Перевод Фаренгейт в градусы")
 window.geometry('350x450+700+200')
+window.config(bg="black")
 frame = tkinter.Frame(window)
 frame.pack(side='top')
 entry = tkinter.Entry(frame)
