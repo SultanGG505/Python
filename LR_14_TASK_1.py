@@ -1,6 +1,3 @@
-# Задание 1. Напишите программу, переводящую градусы по Фаренгейту
-# в градусы по Цельсию. Интерфейс работы с программой представлен ниже.
-
 # master = Tk()
 # master.title("Python")
 #
@@ -18,6 +15,10 @@
 # Button(root, text="Quit", command=root.destroy).pack() #button to close the window
 # root.mainloop()
 
+
+# Задание 1. Напишите программу, переводящую градусы по Фаренгейту
+# в градусы по Цельсию. Интерфейс работы с программой представлен ниже.
+
 import tkinter
 
 
@@ -29,8 +30,6 @@ def click():
     # (Фаренгейт — 32): 1, 8 = Цельсий
     res = (int(faren) - 32) / 1.8
     label.config(text=res)
-
-
 
 
 window = tkinter.Tk()
@@ -47,4 +46,3 @@ button = tkinter.Button(frame, text='Посчитать градусы в цел
 button.pack(side='top')
 exet = tkinter.Button(window, text='Выйти из программы', command=window.destroy).pack(side='top')
 window.mainloop()
-
