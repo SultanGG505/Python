@@ -81,5 +81,5 @@ label_5.grid(row=5, column=0, columnspan=3, pady=10, padx=10)
 exet = Button(window, text='Выйти из программы', command=window.destroy)
 exet.grid(row=6, column=0, columnspan=3, pady=10, padx=10)
 
-exet = tkinter.Button(window, text='Выйти из программы', command=lambda: window.destroy)
+exet = Button(window, text='Выйти из программы', command=lambda: window.destroy)
 window.mainloop()
