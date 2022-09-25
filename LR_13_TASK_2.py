@@ -3,6 +3,7 @@ class Animal():
 
     def eat(self):
         print("Намнём")
+        print(self.name," покушал(а)")
 
     def __init__(self, newName):
         self.name = newName
@@ -18,5 +19,9 @@ class Animal():
         print(self.name, " говорит Гррр")
 
 
-dog = Animal("aboba")
+dog = Animal("Рекс")
+print("Имя собаки -> ", dog.get_name())
+print("Поменяем собаке имя, почему бы и нет? Введите его!")
+dog.set_name(input())
+dog.eat()
 dog.makeNoise()
