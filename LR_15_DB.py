@@ -30,7 +30,7 @@ def sql_faculties(con):
 
     cursorObj.execute(
         "INSERT INTO Faculties "
-        "VALUES(1, 'ФКТиПМ', 'Факультет компьютерных технологий и прикладной математики')"
+        "VALUES(1, 'ФКТиПМ', 'Факультет питона')"
     )
     cursorObj.execute(
         "INSERT INTO Faculties "
@@ -103,6 +103,41 @@ def sql_students(con):
     con.commit()
 
 
+def select(con):
+    cursorObj = con.cursor()
+    cursorObj.execute("SELECT name FROM sqlite_master WHERE type='table'")
+    table = cursorObj.fetchall()
+
+    tablesList = []
+    for tab in table:
+        tablesList.append(tab[0])
+
+    for listItem in tablesList:
+        print(f"Вывод содержимого таблицы {listItem}")
+        cursorObj.execute(f'SELECT * from {listItem}')
+        [print(row) for row in cursorObj.fetchall()]
+
+
+def sql_update(con):
+    cursorObj = con.cursor()
+    cursorObj.execute('UPDATE Faculties SET FacultyName = "ФКТ" where FacultyID = 1')
+    con.commit()
+
+    cursorObj = con.cursor()
+    cursorObj.execute('UPDATE Faculties SET FacultyName = "ФРГ" where FacultyID = 2')
+    con.commit()
+
+    cursorObj = con.cursor()
+    cursorObj.execute('UPDATE Faculties SET FacultyName = "Журналисты" where FacultyID = 3')
+    con.commit()
+
+
+def sql_delete(con):
+    cursorObj = con.cursor()
+    cursorObj.execute('DELETE from Faculties where FacultyID = 3')
+    con.commit()
+
+
 con = sql_connection()
 
 sql_faculties(con)
@@ -111,3 +146,11 @@ sql_sets(con)
 sql_teach_form(con)
 sql_groups(con)
 sql_students(con)
+
+select(con)
+print("ВЫВОД АПДЕЙТА")
+sql_update(con)
+select(con)
+print("ВЫВОД УДАЛЕНИЯ")
+sql_delete(con)
+select(con)
