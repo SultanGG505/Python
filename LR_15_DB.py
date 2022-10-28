@@ -138,19 +138,19 @@ def sql_delete(con):
     con.commit()
 
 
-con = sql_connection()
-
-sql_faculties(con)
-sql_specialities(con)
-sql_sets(con)
-sql_teach_form(con)
-sql_groups(con)
-sql_students(con)
-
-select(con)
-print("ВЫВОД АПДЕЙТА")
-sql_update(con)
-select(con)
-print("ВЫВОД УДАЛЕНИЯ")
-sql_delete(con)
-select(con)
+# con = sql_connection()
+#
+# sql_faculties(con)
+# sql_specialities(con)
+# sql_sets(con)
+# sql_teach_form(con)
+# sql_groups(con)
+# sql_students(con)
+#
+# select(con)
+# print("ВЫВОД АПДЕЙТА")
+# sql_update(con)
+# select(con)
+# print("ВЫВОД УДАЛЕНИЯ")
+# sql_delete(con)
+# select(con)
